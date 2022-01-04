@@ -1,0 +1,73 @@
+@import './variable'
+@import './_mixin'
+
+*
+    margin: $center
+    font-family: $primaryFont
+    box-sizing: border-box
+    overflow-x: hidden
+
+    nav
+        justify-content: center
+        align-items: center
+        ul
+            margin-bottom: 0
+            padding: $margin
+
+            li
+                list-style: none
+                display: inline-block
+                margin-left: $padding
+
+                a
+                    font-size: $fontSizeSmall
+                    text-decoration: none
+                    color: $primaryDark
+
+                    &:hover
+                        border-bottom: $borderHover
+                        color: blue
+
+    main
+        width: 100%
+
+        .background-image-section
+            img
+                @extend %display
+
+            h1
+                font-size: $fontSizeLarge
+                color: $primaryColor
+                position: absolute
+                top: 50%
+                left: 40%
+                right: 50%
+                bottom: 50%
+
+        .grid
+            margin: $margin
+            position: relative
+            @include grid-1
+
+            .grid-section
+                height: 100%
+
+                .overlay
+                    position: absolute
+                    opacity: 0
+                    top: 0
+                    width: 100%
+                    transition: .5s ease
+                    font-size: 20px
+                    padding: 20px
+                    text-align: center
+
+                img
+                    width: 100%
+                    height: auto
+                    opacity: 0.7
+                    @include border-radius(40px, 10px , 5px)
+                    @include box-shadow(3px, 4px, 0, black)
+
+                    &:hover ~ .overlay
+                        opacity: 1

@@ -1,0 +1,103 @@
+* main .background-image-section img {
+  height: auto;
+  width: 100%;
+}
+
+* {
+  margin: 0 auto;
+  font-family: Arial, Serif;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+* nav {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+* nav ul {
+  margin-bottom: 0;
+  padding: 1rem;
+}
+
+* nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 2rem;
+}
+
+* nav ul li a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+* nav ul li a:hover {
+  border-bottom: 1px solid #333;
+  color: blue;
+}
+
+* main {
+  width: 100%;
+}
+
+* main .background-image-section h1 {
+  font-size: 3rem;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  right: 50%;
+  bottom: 50%;
+}
+
+* main .grid {
+  margin: 1rem;
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  grid-gap: 1.2rem;
+}
+
+* main .grid .grid-section {
+  height: 100%;
+}
+
+* main .grid .grid-section .overlay {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  width: 100%;
+  -webkit-transition: .5s ease;
+  transition: .5s ease;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+* main .grid .grid-section img {
+  width: 100%;
+  height: auto;
+  opacity: 0.7;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 40px;
+  -webkit-box-shadow: 3px 4px 0 black;
+  -webkit-moz-shadow: 3px 4px 0 black;
+  box-shadow: 3px 4px 0 black;
+}
+
+* main .grid .grid-section img:hover ~ .overlay {
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */
