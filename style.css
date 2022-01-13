@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
 * main .background-image-section img {
   height: auto;
   width: 100%;
@@ -8,10 +9,23 @@
   font-family: Arial, Serif;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  overflow-x: hidden;
+  font-family: "Kaushan Script", cursive;
 }
 
 * nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -20,25 +34,34 @@
           align-items: center;
 }
 
-* nav ul {
-  margin-bottom: 0;
-  padding: 1rem;
+ul {
+  text-align: center;
 }
 
-* nav ul li {
+ul li {
   list-style: none;
   display: inline-block;
   margin-left: 2rem;
 }
 
-* nav ul li a {
-  font-size: 1rem;
+ul li a {
+  font-size: 1.5rem;
   text-decoration: none;
   color: #333;
 }
 
-* nav ul li a:hover {
-  border-bottom: 1px solid #333;
+ul li a:hover {
+  border-bottom: 1px solid blue;
+  color: blue;
+}
+
+* nav .social-icons i {
+  color: blue;
+  margin: 0.5rem;
+}
+
+* nav .social-icons i:hover {
+  border-bottom: 1px solid blue;
   color: blue;
 }
 
@@ -51,14 +74,15 @@
   color: #fff;
   position: absolute;
   top: 50%;
-  left: 40%;
-  right: 50%;
+  left: 30%;
+  right: 30%;
   bottom: 50%;
 }
 
 * main .grid {
   margin: 1rem;
   position: relative;
+  height: auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -69,19 +93,7 @@
 }
 
 * main .grid .grid-section {
-  height: 100%;
-}
-
-* main .grid .grid-section .overlay {
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  width: 100%;
-  -webkit-transition: .5s ease;
-  transition: .5s ease;
-  font-size: 20px;
-  padding: 20px;
-  text-align: center;
+  padding: 1rem;
 }
 
 * main .grid .grid-section img {
@@ -92,12 +104,34 @@
   border-top-right-radius: 10px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 40px;
-  -webkit-box-shadow: 3px 4px 0 black;
-  -webkit-moz-shadow: 3px 4px 0 black;
-  box-shadow: 3px 4px 0 black;
+  -webkit-box-shadow: 4px 4px 5px 0 #333;
+  -webkit-moz-shadow: 4px 4px 5px 0 #333;
+  box-shadow: 4px 4px 5px 0 #333;
 }
 
-* main .grid .grid-section img:hover ~ .overlay {
+* main .grid .grid-section img:hover {
   opacity: 1;
+}
+
+* .table {
+  padding: 2rem;
+}
+
+table {
+  width: 100%;
+  padding: 2rem;
+  border: 1px solid blue;
+}
+
+th,
+td {
+  border: 1px solid blue;
+  padding: 0.5rem;
+}
+
+th:hover,
+td:hover {
+  background: blue;
+  color: #fff;
 }
 /*# sourceMappingURL=style.css.map */

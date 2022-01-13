@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap')
 @import './variable'
 @import './_mixin'
 
@@ -5,69 +6,90 @@
     margin: $center
     font-family: $primaryFont
     box-sizing: border-box
-    overflow-x: hidden
+    font-family: $fontFamily
 
     nav
-        justify-content: center
-        align-items: center
-        ul
-            margin-bottom: 0
-            padding: $margin
+        display: flex
+        flex-flow: row
+        justify-content: space-between
 
-            li
-                list-style: none
-                display: inline-block
-                margin-left: $padding
+        @at-root
+            .navbar
+                justify-content: center
+                align-items: center
+                @at-root
+                    ul
+                        text-align: center
 
-                a
-                    font-size: $fontSizeSmall
-                    text-decoration: none
-                    color: $primaryDark
+                        li
+                            list-style: none
+                            display: inline-block
+                            margin-left: $padding
 
-                    &:hover
-                        border-bottom: $borderHover
-                        color: blue
+                            a
+                                font-size: $fontSizeMedium
+                                text-decoration: none
+                                color: $primaryDark
 
+                                &:hover
+                                    border-bottom: $borderHover
+                                    color: $secondaryColor
+
+        .social-icons i
+            color: $secondaryColor
+            margin: $margin / 2
+            &:hover
+                border-bottom: $borderHover
+                color: $secondaryColor
     main
         width: 100%
 
         .background-image-section
-            img
-                @extend %display
-
             h1
                 font-size: $fontSizeLarge
                 color: $primaryColor
                 position: absolute
                 top: 50%
-                left: 40%
-                right: 50%
+                left: 30%
+                right: 30%
                 bottom: 50%
+
+            img
+                @extend %display
 
         .grid
             margin: $margin
             position: relative
+            height: auto
             @include grid-1
 
             .grid-section
-                height: 100%
-
-                .overlay
-                    position: absolute
-                    opacity: 0
-                    top: 0
-                    width: 100%
-                    transition: .5s ease
-                    font-size: 20px
-                    padding: 20px
-                    text-align: center
+                padding: $margin
 
                 img
                     width: 100%
                     height: auto
                     opacity: 0.7
                     @include border-radius(40px, 10px , 5px)
-                    @include box-shadow(3px, 4px, 0, black)
+                    @include box-shadow(4px, 4px, 5px, 0, $primaryDark)
 
-                    &:hover ~ .overlay
+                    &:hover
                         opacity: 1
+
+    .table
+        padding: $padding
+
+        @at-root
+            table
+                width: 100%
+                padding: $padding
+                border: $borderHover
+
+                @at-root
+                    th,
+                    td
+                        border: $borderHover
+                        padding: $margin / 2
+                        &:hover
+                            background: $secondaryColor
+                            color: $primaryColor
